@@ -1,26 +1,23 @@
 def line():
-    Y1 = CoA * CoX1 + CoB
-    Y2 = CoA * CoX2 + CoB
-    Distancia = ((CoX2 - CoX1)**2 + (Y2 - Y1)**2)**0.5
+    a = float(input("Ingrese el coeficiente A: "))
+    b = float(input("Ingrese el coeficiente B: "))
+    x1 = float(input("Ingrese el coeficiente X1: "))
+    x2 = float(input("Ingrese el coeficiente X2: "))
 
-    print (f"El coeficiente A de su ecuación de la recta es: {CoA}")
-    print (f"El coeficiente B de su ecuación de la recta es: {CoB}")
-    print (f"El coeficiente X1 de su ecuación de la recta es: {CoX1}")
-    print (f"El coeficiente X2 de su ecuación de la recta es: {CoX2}")
+    print(f"El coeficiente A de su ecuación de la recta es: {a}")
+    print(f"El coeficiente B de su ecuación de la recta es: {b}")
+    print(f"El coeficiente X1 de su ecuación de la recta es: {x1}")
+    print(f"El coeficiente X2 de su ecuación de la recta es: {x2}")
 
-    print ("")
+    y1 = a * x1 + b
+    y2 = a * x2 + b
 
-    print ("Para la siguiente ecuación:")
-    print (f"\tY = {CoA}X + {CoB}")
+    print("\nPara la siguiente ecuación:")
+    print(f"\tY = {a}X + {b}")
 
-    print ("")
+    print("\nDados los siguientes puntos:")
+    print(f"\tP1 ({x1}, {y1})")
+    print(f"\tP2 ({x2}, {y2})")
 
-    print ("Dados los siguientes puntos:")
-    print (f"\tP1 ({CoX1}, {Y1})")
-    print (f"\tP2 ({CoX2}, {Y2})")
-
-    print ()
-
-    print (f"La distancia entre ellos es: {Distancia}")
-
-line()
+    distancia = ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+    print(f"\nLa distancia entre ellos es: {distancia}")
